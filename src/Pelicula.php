@@ -109,7 +109,7 @@ class Pelicula
 
         return false;
     }
-
+#Funcion Buscar
     public function Buscar($buscar)
     {
         $buscar = $_POST['buscar'];
