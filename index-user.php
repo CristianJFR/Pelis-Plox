@@ -31,19 +31,21 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.php">Pelis Chafas</a>
+        <a class="navbar-brand" href="index-user.php">Pelis Chafas</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav pull-right">
-          <li>
-            <a href="panel/dashboard.php" class="btn glyphicon glyphicon-cog" id="admin">Administrar<span class="badge"></span></a>
-          </li>
-          
-        </ul>
-      </div>
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">User <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="panel/index.php">Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
       <!--/.nav-collapse -->
-      
     </div>
+    
   </nav>
 
   <div class="container" id="main">

@@ -3,7 +3,7 @@
 require '../vendor/autoload.php';
 
 $pelicula = new Kawschool\Pelicula;
-
+$usuario = new Kawschool\Usuario;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['accion'] === 'Registrar') {
@@ -40,6 +40,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header('Location: dashboard.php');
         else
             print 'Error al registrar una pelicula';
+    }
+
+    if ($_POST['accionUsuario'] === 'Registrar') {
+
+        if (empty($_POST['Nombre']))
+            exit('Completar Nombre');
+
+        if (empty($_POST['Clave']))
+            exit('Completar Clave');
+
+        $_params = array(
+            'Nombre' => $_POST['Nombre'],
+            'Clave' => $_POST['Clave']
+        );
+
+        $rpt = $usuario->registrarUsuarios($_params);
+
+        if ($rpt)
+            
+            header('Location: index.php');
+        else
+            print 'Error al registrar un usuario';
     }
 
     

@@ -31,9 +31,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">PelisPlox</a>
+                <a class="navbar-brand" href="dashboard.php">PelisPlox</a>
             </div>
             <!--/.nav-collapse -->
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.php">Cerrar Sesion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
         </div>
     </nav>
 
