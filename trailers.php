@@ -71,6 +71,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
                 <iframe width="660" height="415" src="https://www.youtube.com/embed/<?php print $resultado['Trailer']?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <h1><?php print $resultado['Titulo']?></h1>               
                 <a href="#" class="btn btn-info " id="trailer-genero"> <center> <h5> <?php print $resultado['Genero']?> </center></h5></a>
+                <div id="trailer-genero"><h4><i class="fa-regular fa-heart"></i> <?php print $resultado['Puntuacion']?></h4></div>
                 <br> <br>
                 <h4 class="trailers-descripcion"><?php print $resultado['Descripcion']?></h4>
             </div>
@@ -86,6 +87,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/7d076c2af1.js" crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
 </body>
 

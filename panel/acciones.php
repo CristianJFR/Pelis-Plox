@@ -105,6 +105,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         print 'Error al actualizar una pelicula';
 
     }
+
+
+    if ($_POST['accion']==='Puntuar'){
+
+        if (empty($_POST['Puntuacion']))
+            exit('Completar Puntuacion');
+
+    $_params = array(
+        'Puntuacion' => $_POST[`Puntuacion`+`${cont}`]
+    );
+
+    $rpt = $pelicula->actualizar($_params);
+    if($rpt)
+        header('Location: dashboard.php');
+    else
+        print 'Error al actualizar una pelicula';
+
+    }
 }
 
 if($_SERVER['REQUEST_METHOD'] ==='GET'){

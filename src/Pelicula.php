@@ -62,6 +62,22 @@ class Pelicula
         return false;
     }
 
+    public function actualizarPuntuacion($_params)
+    {
+        $sql = "UPDATE `peliculas` SET `Puntuacion`=:Puntuacion WHERE `id`=:id";
+
+        $resultado = $this->cn->prepare($sql);
+
+        $_array = array(
+            ":Puntuacion" => $_params['Puntuacion'],
+        );
+
+        if ($resultado->execute($_array))
+            return true;
+
+        return false;
+    }
+
 
     public function eliminar($id)
     {
